@@ -4,9 +4,11 @@
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/http-vue-loader"></script>
 <script type="module">    
-    Vue.use('Editor', httpVueLoader('./Editor.vue'));
 
     var app = new Vue({
-        el: '#app'
+        el: '#app',
+        components:  {
+            Editor: httpVueLoader('./Editor.vue')
+        }
     })
 </script>
