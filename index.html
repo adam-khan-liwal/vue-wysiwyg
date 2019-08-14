@@ -1,11 +1,10 @@
 <div id="app">
     <Editor :json="[]"></Editor>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script type="module">
-    import Editor from './Editor.vue'
-    
-    Vue.use('Editor', Editor);
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/http-vue-loader"></script>
+<script type="module">    
+    Vue.use('Editor', httpVueLoader('./Editor.vue'));
 
     var app = new Vue({
         el: '#app'
