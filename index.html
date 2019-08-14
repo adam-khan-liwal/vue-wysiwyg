@@ -1,5 +1,5 @@
 <div id="app">
-    <editor :json="[]"></editor>
+    <editor :json="demo_data"></editor>
 </div>
 <script src="https://unpkg.com/vue"></script>
 <script type="module">    
@@ -9,6 +9,9 @@
         el: '#app',
         components:  {
             editor: Editor
+        },
+        data: {
+            demo_data: [{"type":"TextItem","settings":{"text":"Hello,\n\nClick on me to edit.\n\nThis is a "}},{"type":"LinkItem","settings":{"text":"link","link":"https://www.github.io"}},{"type":"TextItem","settings":{"text":"\n\n\n"}},{"type":"ImageItem","settings":{"text":"This is an image caption","link":"","arkh":"","pta":"https://avatars0.githubusercontent.com/u/8408915?s=40&v=4","kchh":200}}]
         }
     })
 </script>
@@ -20,6 +23,11 @@
 
 .editor .rendered {
     white-space: pre-wrap;
+}
+
+textarea {
+    height: 200px;
+    width: 300px;
 }
 
 </style>

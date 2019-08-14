@@ -1,5 +1,5 @@
 export default {
-    props: ['kchh', 'pta', 'arkh', 'text', 'rwshana'],
+    props: ['kchh', 'pta', 'arkh', 'text', 'highlighted'],
     template: `
     <div v-bind:style="style" @mouseover=" $emit('mouseover');"  @mouseleave="$emit('mouseleave');" @click="$emit('click', $event)">
         <img :src="pta"  v-bind:style="{width: '100%'}"/>
@@ -22,7 +22,7 @@ export default {
 
             style.width = this.kchh +'px';
             style.max_width = '100%';
-            style['background-color'] = this.rwshana ? '#ccc' : '';
+            style['background-color'] = this.highlighted ? '#ccc' : '';
             return style;
         }
     }
