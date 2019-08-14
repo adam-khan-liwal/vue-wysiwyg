@@ -1,0 +1,13 @@
+<div id="app">
+    <Editor :json="[]"></Editor>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="module">
+    import Editor from './Editor.vue'
+    
+    Vue.use('Editor', Editor);
+
+    var app = new Vue({
+        el: '#app'
+    })
+</script>
