@@ -1,5 +1,5 @@
 <div id="app">
-    <Editor :json="[]"></Editor>
+    <editor :json="[]"></editor>
 </div>
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/http-vue-loader"></script>
@@ -8,7 +8,7 @@
     var app = new Vue({
         el: '#app',
         components:  {
-            Editor: httpVueLoader('./Editor.vue')
+            editor: httpVueLoader('./Editor.vue')
         }
     })
 </script>
