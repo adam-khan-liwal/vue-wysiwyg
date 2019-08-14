@@ -1,18 +1,10 @@
-<template>
-    <div v-bind:style="style" @mouseover=" $emit('mouseover');"  @mouseleave="$emit('mouseleave');" @click="$emit('click', $event)">
-        <img :src="pta"  v-bind:style="{width: '100%'}"/>
-        <div>{{mtn}}</div>
-        <slot></slot>
-    </div>
-</template>
-<script>
 export default {
-    props: ['kchh', 'pta', 'arkh', 'mtn', 'rwshana'],
+    props: ['kchh', 'pta', 'arkh', 'text', 'rwshana'],
     template: `
     <div v-bind:style="style" @mouseover=" $emit('mouseover');"  @mouseleave="$emit('mouseleave');" @click="$emit('click', $event)">
-            <img :src="pta"  v-bind:style="{width: '100%'}"/>
-            <div>{{mtn}}</div>
-            <slot></slot>
+        <img :src="pta"  v-bind:style="{width: '100%'}"/>
+        <div>{{text}}</div>
+        <slot></slot>
     </div>
     `,
     computed: {
@@ -34,5 +26,5 @@ export default {
             return style;
         }
     }
+    
 }
-</script>

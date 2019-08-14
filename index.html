@@ -2,13 +2,24 @@
     <editor :json="[]"></editor>
 </div>
 <script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/http-vue-loader"></script>
 <script type="module">    
+    import Editor from './Editor.js';
 
     var app = new Vue({
         el: '#app',
         components:  {
-            editor: httpVueLoader('./Editor.vue')
+            editor: Editor
         }
     })
 </script>
+<style>
+.editor {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.editor .rendered {
+    white-space: pre-wrap;
+}
+
+</style>
